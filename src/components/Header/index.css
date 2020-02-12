@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
+
+
+
+.topo_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #2CC185;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.topo_info .left{
+    padding-left: 5vw;
+}
+
+.topo_info .right{
+    width: 100%;
+    text-align: right;
+}
+
+.topo_info .right label{
+    margin-right: 5vw;
+}
+
+.Header{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: #666666;
+    padding-top: 20px;
+    padding-left: 6%;
+    padding-right:8%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    
+}
+
+.toggle label{
+    color: white;
+    font-size: 16px;    
+    display: none;
+    margin-top: -25px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    opacity: 0.5;
+    
+}
+
+.menu{
+    margin-right: 10vw;
+    color: #161616;
+}
+.toggle span{
+    padding-right: 2px;
+    font-size: 20px;
+}
+
+#toggle{
+    display: none;
+}
+
+@media only screen and (max-width: 671px){
+    .topo_info{
+        display: flex;
+        flex-direction: column;   
+        text-align: center;
+    }
+    .topo_info .left{
+        padding-left: 0vw;
+    }
+    .topo_info .right{
+        width: 100%;
+        text-align: center;
+    }
+    .topo_info .right label{
+        padding-top: 10px;
+        margin-right: 0vw;
+    }
+    
+}
+@media only screen and (max-width:991px){
+  
+   .Header{
+       display: grid;
+       grid-template-columns: 11fr 1fr;
+       z-index: 1000;
+   }
+   
+   .menu{
+       padding-top: 20px;
+       color: #161616;
+       display: none;
+      
+   }
+    .toggle label{
+        display: flex;
+        cursor: pointer;
+        flex-direction: row;
+        margin-top: 0px;
+    }
+
+    .toggle a{
+       margin-top: 3.8px;
+       margin-left: 2px;
+    }
+
+    .menu a{
+        display: block;
+       
+    }
+    
+
+    #toggle:checked + .menu{
+        display: block;
+       
+    }
+}
+
+
+
+.Header .brand_header a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #191919;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.brand_header .name{
+    padding-top: 10px;
+    padding-left: 8px;
+}
+.Header .brand_header img{
+    width: 50px;
+    height: 50px;
+}
+
+.brand_header{
+    flex-grow: 1;
+    display:flex;
+    margin-top: -13px;
+    padding-bottom: 10px;
+    flex-direction: row;
+}
+
+.Header ul{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Header li{
+    margin-right: 2vw;
+    color: #161616;
+    display: inline;
+    cursor: pointer;
+    
+}
+.Header .nav .active, .Header .nav a:hover{
+    border-bottom: 2px solid #2CC185;
+    padding-bottom: 5px;
+}
+.Header .nav .active, .Header .nav .active:hover{
+    color: #2CC185;
+}
