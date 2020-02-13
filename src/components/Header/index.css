@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
 
 
-
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
 .topo_info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -25,17 +34,16 @@
     margin-right: 5vw;
 }
 
-.Header{
+.header{
     display: flex;
     flex-direction: row;
     background-color: white;
-    color: #666666;
     padding-top: 20px;
     padding-left: 6%;
     padding-right:8%;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
     width: 100%;
-    
+    z-index: 2;
 }
 
 .toggle label{
@@ -51,7 +59,6 @@
 
 .menu{
     margin-right: 10vw;
-    color: #161616;
 }
 .toggle span{
     padding-right: 2px;
@@ -83,7 +90,7 @@
 }
 @media only screen and (max-width:991px){
   
-   .Header{
+   .header{
        display: grid;
        grid-template-columns: 11fr 1fr;
        z-index: 1000;
@@ -121,7 +128,7 @@
 
 
 
-.Header .brand_header a{
+.header .brand_header a{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #191919;
@@ -134,7 +141,7 @@
     padding-top: 10px;
     padding-left: 8px;
 }
-.Header .brand_header img{
+.header .brand_header img{
     width: 50px;
     height: 50px;
 }
@@ -147,22 +154,22 @@
     flex-direction: row;
 }
 
-.Header ul{
+.header ul{
     list-style: none;
     font-family: 'Poppins', sans-serif;
 }
 
-.Header li{
+.header li{
     margin-right: 2vw;
-    color: #161616;
     display: inline;
     cursor: pointer;
     
 }
-.Header .nav .active, .Header .nav a:hover{
+
+.header .nave .active, .header .nave a:hover{
     border-bottom: 2px solid #2CC185;
     padding-bottom: 5px;
 }
-.Header .nav .active, .Header .nav .active:hover{
-    color: #2CC185;
+.header .nave .active, .header .nave .active:hover{
+    color:#2CC185;
 }

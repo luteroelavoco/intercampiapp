@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
+
+.acerca{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    padding: 50px;
+    background-color: white;
+}
+
+.acerca .item{
+    padding: 0px 10px 10px 10px;
+    margin-top: 10px;
+}
+
+.acerca .item i{
+    font-size: 80px;
+    border-radius: 100%;
+    padding: 20px 30px 20px 30px;
+    color: white;
+    background: #2CC185;
+}
+
+.acerca .item h3{
+    font-weight: bold;
+}
+
+.acerca .item p{
+    
+}

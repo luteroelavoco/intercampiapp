@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
+.carousel{
+    transform: translateY(-100px) ;
+    height: 600px;
+    perspective: 600px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+.carousel .carousel-item{
+    border-radius: 8px;
+    background: white;
+    width: 340px;
+    height: 430px;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.carousel .carousel-item img{
+    width: 200px;
+}
+.carousel .carousel-item .topo .date{
+    background: #2CC185;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-weight: 600;
+}
+.carousel .carousel-item .topo .date span{
+    opacity: 0.8;
+}
+.carousel .carousel-item .topo{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.carousel .carousel-item .topo .title{
+    background: #2CC185;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+    border-radius: 2%;
+}
+
+.carousel .carousel-item h1{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+.carousel .carousel-item h2{
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+    color:  #2CC185;
+}
+
+.carousel .carousel-item p{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+.carousel .carousel-item .info .baixo{
+    padding-left: 20px;
+    padding-top: 15px;
+    text-align: left;
+    
+}

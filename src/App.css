@@ -3,4 +3,16 @@
     padding: 0;
 }
 
+body{
+    background: #d3dbde;
+}
 
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .main{
+    padding-top: 102px;
+  }

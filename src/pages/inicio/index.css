@@ -1,80 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
-
 .inicio{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%; 
+    height: 450px; 
     background: #d3dbde;
-    padding-top: 120px;
+    margin-top: 80px;
     text-align: center;
 
 }
-
 @media only screen and (max-width: 671px){
     .inicio{
         padding-top: 125px;  
     }
-    
-}
-.inicio .carousel{
-    transform: translateY(-100px) ;
-    height: 750px;
-    perspective: 600px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    
-   
-}
-
-.carousel .carousel-item{
-    border-radius: 8px;
-    background: white;
-    width: 400px;
-    height: 500px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-.carousel .carousel-item img{
-    width: 200px;
-}
-.carousel .carousel-item .topo .date{
-    background: #2CC185;
-    padding: 10px 20px 10px 20px;
-    color: white;
-    border-radius: 100%;
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    font-weight: 600;
-}
-.carousel .carousel-item .topo .date span{
-    opacity: 0.8;
-}
-.carousel .carousel-item .topo{
-    position: relative;
-    text-align: center;
-    color: white;
-}
-.carousel .carousel-item .topo .title{
-    background: #2CC185;
-    padding: 10px;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-}
-
-.carousel .carousel-item h1{
-    font-size: 20px;
-    text-align: left;
-    padding-left: 20px;
-
-}
-.carousel .carousel-item h2{
-    font-size: 16px;
-    text-align: left;
-    padding-left: 20px;
 }
