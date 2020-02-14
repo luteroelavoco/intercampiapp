@@ -1,12 +1,12 @@
 import React from 'react';
 import "./index.css";
 
-export default function CardTime(actual) {
+export default function CardTime({ origem, destino }) {
     return (
         <div className="card" >
             <div className="top">
-                <label style={{ color: 'black' }}> Saida : <span>Liberdade</span> </label>
-                <label style={{ color: 'black' }}> Destino : <span>Palmares</span> </label>
+                <label style={{ color: 'black' }}> Saida : <span>{origem}</span> </label>
+                <label style={{ color: 'black' }}> Destino : <span>{destino}</span> </label>
             </div>
             <hr />
             <div className="bottom">

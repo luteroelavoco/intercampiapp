@@ -11,7 +11,7 @@ export default function Rotas() {
             subRotas: [{
                 name: "Rota A",
                 ref: "Rota1A",
-                origem: ["21:10", "21:40"],
+                origem: ["07:35", "08:10","08:45","09:30","10:30","11:15","11:50"],
                 destino: ["21:10", "21:40"]
             },
             {
@@ -67,17 +67,53 @@ export default function Rotas() {
             id: 3,
             origem: "Redenção",
             destino: "Fortaleza",
+            rodoviario:"(Catraca)",
             ref: "Rota4A",
-            subRotas: ["Dia útil", "SÁB.", "DOM."],
-            subRef: ["diaA", "sabA", "domA"]
+            subRotas: [{
+                name: "Dia útil",
+                ref: "diaA",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "SÁB",
+                ref: "sabA",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "DOM.",
+                ref: "domA",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            }
+            ],
         },
         {
             id: 4,
-            origem: "Fortaleza",
-            destino: "Redenção",
+            origem: "Redenção",
+            destino: "Fortaleza",
+            rodoviario:"(Rodoviario)",
             ref: "Rota4B",
-            subRotas: ["Dia útil", "SÁB.", "DOM."],
-            subRef: ["diaB", "sabB", "domB"]
+            subRotas: [{
+                name: "Dia útil",
+                ref: "diaB",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "SÁB",
+                ref: "sabB",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "DOM.",
+                ref: "domB",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            }
+            ],
         }
     ])
 

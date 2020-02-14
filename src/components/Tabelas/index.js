@@ -106,11 +106,11 @@ export default function Tabelas({ tabs, tabsPub }) {
                     </div>
                     {item.subRotas.map((subitem, index) =>
                         <div key={index} id={subitem.ref} className="tabecontent tabelinha">
-                            <Card />
-                            <Card />
+                            <Card origem={item.origem} destino={item.destino} />
+                            <Card origem={item.destino} destino={item.origem}/>
                             <div className="mais">
                                 <div className="subtabela">
-                                    <SubTabela />
+                                    <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />
                                 </div>
                                 <button className="vermais" onClick={(e) => VerMais(e)}>Ver mais</button>
                             </div>
@@ -122,23 +122,23 @@ export default function Tabelas({ tabs, tabsPub }) {
             <div id="Rota4" className="tabecontent tabela">
                 <div className="tabe _tab">
                     {tabsPub.map((item) =>
-                        <button key={item.id} className="_tablinks" onClick={(e) => openTab(e, item.ref)}>{item.origem}- {item.destino} </button>
+                        <button key={item.id} className="_tablinks" onClick={(e) => openTab(e, item.ref)}>{item.origem}- {item.destino} {item.rodoviario} </button>
                     )}
                 </div>
                 {tabsPub.map(item =>
                     <div key={item.id} id={item.ref} className="tabecontent tabelinha">
                         <div className="tabe _tabelinha">
                             {item.subRotas.map((subitem, index) =>
-                                <button key={index} className="_tablinha" onClick={(e) => openTabP(e, item.subRef[index])}>{subitem} </button>
+                                <button key={index} className="_tablinha" onClick={(e) => openTabP(e, subitem.ref)}>{subitem.name} </button>
                             )}
                         </div>
                         {item.subRotas.map((subitem, index) =>
-                            <div key={index} id={item.subRef[index]} className="tabecontent tabelinhaP">
-                                <Card />
-                                <Card />
+                            <div key={index} id={subitem.ref} className="tabecontent tabelinhaP">
+                                <Card origem={item.origem} destino={item.destino} />
+                                <Card origem={item.destino} destino={item.origem}/>
                                 <div className="mais">
                                     <div className="subtabela">
-                                        <SubTabela />
+                                        <SubTabela origem={item.origem} destino ={item.destino} subRotas={subitem}/>
                                     </div>
                                     <button className="vermais" onClick={(e) => VerMais(e)}>Ver mais</button>
                                 </div>
