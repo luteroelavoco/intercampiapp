@@ -5,8 +5,9 @@
     text-align: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+    background: white;
     display: flex;
-    background: #e2e2e2;
+    margin-top: 50px;
+    flex-direction: column;
     width: 100%;
-    height: 400px;
 }

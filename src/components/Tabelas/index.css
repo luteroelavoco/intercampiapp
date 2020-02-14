@@ -1,0 +1,78 @@
+
+/* Style the tabe */
+.tabe {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+  }
+  
+  /* Style the buttons that are used to open the tabe content */
+  .tabe button {
+    background-color: inherit;
+    float: left;
+    width: 100%;
+    border: 1px solid gainsboro;
+    outline: none;
+    cursor: pointer;
+    justify-self: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2e2e2e;
+    padding: 10px 8px;
+    transition: 0.3s;
+  }
+
+  @media only screen and (max-width : 321px){
+    .tabe button {
+        font-size: 10px;
+    }
+  }
+  
+  /* Change background color of buttons on hover */
+  .tabe button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tabelink class */
+  .tabe button.active {
+    background-color: white;
+    border-bottom: 5px solid  #2CC185;
+    color: #2CC185;
+  }
+  
+  /* Style the tabe content */
+  .tabecontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  .tabecontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  /* outra tab */
+  ._tab{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+  }
+  ._tabelinha{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+  
+  

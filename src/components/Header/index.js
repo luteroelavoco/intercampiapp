@@ -13,14 +13,13 @@ export default function Headers() {
             href: "inicio",
             active: false,
             offset: -260,
-            onClick:scroll.scrollToTop()
         },
         {
             id: 2,
             title: "Acerca",
             href: "acerca",
             active: false,
-            offset: -90,
+            offset: -260,
         },
         {
             id: 2,
@@ -91,7 +90,9 @@ export default function Headers() {
                                         spy={true}
                                         smooth={true}
                                         offset={item.offset}
+                                        isDynamic={true}
                                         duration={600}
+                                        ignoreCancelEvents={false}
                                         onSetActive={() => handleSetActive(item.id)}
                                     >
                                         {item.title}

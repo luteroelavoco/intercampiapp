@@ -1,6 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
 
+@media only screen and (max-width: 671px){
+
+    .acerca{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .acerca{
     text-align: center;
     justify-content: center;

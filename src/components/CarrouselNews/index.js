@@ -5,7 +5,7 @@ export default function Card({ news }) {
     return (
         <Carousel className="carousel">
             {news.map(item =>
-                <div className="carousel item">
+                <div key={item.id} className="carousel item">
                     <div className="topo">
                         <div className="title">{item.info}</div>
                         <img src={item.img} alt="Avatar" style={{ width: '100%' }} />
