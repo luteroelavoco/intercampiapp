@@ -1,0 +1,38 @@
+.card{
+    text-align: center;
+    color: black;
+    padding: 10px 0 10px 0px;
+  }
+
+  .card hr{
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .card .top{
+    margin: 0;
+    padding: 8px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card .top span{
+    font-weight: bold;
+  }
+
+  .card .bottom{
+    margin-top: -15px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr ;
+  }
+
+  .card .bottom span{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .card .bottom .actual{
+    color: #2CC185;
+  }
+

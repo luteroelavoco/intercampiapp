@@ -75,4 +75,21 @@
     grid-template-columns: 4fr 4fr 4fr;
   }
   
-  
+  .mais .subtabela{
+    display: none;
+  }
+  .mais button{
+    background-color: #2CC185;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .mais button:hover{
+    border: 1px solid #2CC185;
+    background-color:white;
+    color: #2CC185;
+  }

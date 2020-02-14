@@ -1,12 +1,89 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./index.css";
 import Tabela from "../../components/Tabelas";
 export default function Rotas() {
-    
-   
+    const [tabs, setTabs] = useState([
+        {
+            id: 1,
+            origem: "Liberdade",
+            destino: "Palmares",
+            ref: "Rota1",
+            subRotas: [{
+                name: "Rota A",
+                ref: "Rota1A",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "Rota B",
+                ref: "Rota1B",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            }
+            ],
+
+        },
+        {
+            id: 2,
+            origem: "Liberdade",
+            destino: "Auroras",
+            ref: "Rota2",
+            subRotas: [{
+                name: "Rota A",
+                ref: "Rota2A",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "Rota B",
+                ref: "Rota2B",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            }
+            ],
+        },
+        {
+            id: 3,
+            origem: "Auroras",
+            destino: "Palmares",
+            ref: "Rota3",
+            subRotas: [{
+                name: "Rota A",
+                ref: "Rota3A",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            },
+            {
+                name: "Rota B",
+                ref: "Rota3B",
+                origem: ["21:10", "21:40"],
+                destino: ["21:10", "21:40"]
+            }
+            ],
+        }
+    ]);
+    const [tabsPub, setTabsPub] = useState([
+        {
+            id: 3,
+            origem: "Redenção",
+            destino: "Fortaleza",
+            ref: "Rota4A",
+            subRotas: ["Dia útil", "SÁB.", "DOM."],
+            subRef: ["diaA", "sabA", "domA"]
+        },
+        {
+            id: 4,
+            origem: "Fortaleza",
+            destino: "Redenção",
+            ref: "Rota4B",
+            subRotas: ["Dia útil", "SÁB.", "DOM."],
+            subRef: ["diaB", "sabB", "domB"]
+        }
+    ])
+
     return (
         <div className="rotas">
-           <Tabela/>
+            <Tabela tabs={tabs} tabsPub={tabsPub} />
         </div>
     )
 } 

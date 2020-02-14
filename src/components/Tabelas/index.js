@@ -1,56 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Tab } from 'react-materialize';
+import Card from "../CardTime";
+import SubTabela from "./SubTabela";
 import "./index.css";
 
-export default function Tabelas() {
-    const [tabs, setTabs] = useState([
-        {
-            id: 1,
-            origem: "Liberdade",
-            destino: "Palmares",
-            ref: "Rota1",
-            subRotas: ["Rota A", "Rota B"],
-            subRef: ["Rota1A", "Rota1B"],
-            RotaAOrigem:["21:10","21:40"],
-            RotaBOrigem:["22:30","22:50"],
-            RotaADestino:["21:15","23:40"],
-            RotaBDestino:["21:10","23:06"]
-        },
-        {
-            id: 2,
-            origem: "Liberdade",
-            destino: "Auroras",
-            ref: "Rota2",
-            subRotas: ["Rota A", "Rota B"],
-            subRef: ["Rota2A", "Rota2B"]
-        },
-        {
-            id: 3,
-            origem: "Auroras",
-            destino: "Palmares",
-            ref: "Rota3",
-            subRotas: ["Rota A", "Rota B"],
-            subRef: ["Rota3A", "Rota3B"]
-        }
-    ]);
-    const [tabsPub, setTabsPub] = useState([
-        {
-            id: 3,
-            origem: "Redenção",
-            destino: "Fortaleza",
-            ref: "Rota4A",
-            subRotas: ["Dia útil", "SÁB.", "DOM."],
-            subRef: ["diaA", "sabA", "domA"]
-        },
-        {
-            id: 4,
-            origem: "Fortaleza",
-            destino: "Redenção",
-            ref: "Rota4B",
-            subRotas: ["Dia útil", "SÁB.", "DOM."],
-            subRef: ["diaB", "sabB", "domB"]
-        }
-    ])
+export default function Tabelas({ tabs, tabsPub }) {
+
     function openTabela(evt, rotaName) {
         // Declare all variables
         var i, tabcontent, tablinks, pos;
@@ -89,10 +43,10 @@ export default function Tabelas() {
         }
         document.getElementById(rotaName).style.display = "block";
         evt.currentTarget.className += " active";
-        if(rotaName === "Rota4A"){
+        if (rotaName === "Rota4A") {
             document.getElementsByClassName("_tablinha")[0].click();
         }
-        if(rotaName === "Rota4B"){
+        if (rotaName === "Rota4B") {
             document.getElementsByClassName("_tablinha")[3].click();
         }
     }
@@ -113,8 +67,27 @@ export default function Tabelas() {
         document.getElementById(rotaName).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    function VerMais(evt) {
+        var elements = document.getElementsByClassName("subtabela");
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].style.display === "none") {
+                elements[i].style.display = "block";
+                evt.currentTarget.innerHTML = "Ver menos";
+            }
+            else {
+                elements[i].style.display = "none";
+                evt.currentTarget.innerHTML = "Ver Mais";
+            }
+        }
+        var elementsbuttons = document.getElementsByClassName("vermais");
+        for (var i = 0; i < elementsbuttons.length; i++)
+            elementsbuttons[i].innerHTML = evt.currentTarget.innerHTML;
+    }
     useEffect(() => {
         document.getElementsByClassName("defaultOpen")[0].click();
+        var elements = document.getElementsByClassName("subtabela");
+        for (var i = 0; i < elements.length; i++)
+            elements[i].style.display = "none";
     });
     return (
         <div className="rotas">
@@ -128,13 +101,19 @@ export default function Tabelas() {
                 <div key={item.id} id={item.ref} className="tabecontent tabela">
                     <div className="tabe _tab">
                         {item.subRotas.map((subitem, index) =>
-                            <button key={index} className="_tablinks" onClick={(e) => openTab(e, item.subRef[index])}>{subitem} </button>
+                            <button key={index} className="_tablinks" onClick={(e) => openTab(e, subitem.ref)}>{subitem.name} </button>
                         )}
                     </div>
                     {item.subRotas.map((subitem, index) =>
-                        <div key={index} id={item.subRef[index]} className="tabecontent tabelinha">
-                            <h3>{subitem}</h3>
-                            <p> {subitem} is the capital of France.</p>
+                        <div key={index} id={subitem.ref} className="tabecontent tabelinha">
+                            <Card />
+                            <Card />
+                            <div className="mais">
+                                <div className="subtabela">
+                                    <SubTabela />
+                                </div>
+                                <button className="vermais" onClick={(e) => VerMais(e)}>Ver mais</button>
+                            </div>
                         </div>
                     )}
 
@@ -155,9 +134,16 @@ export default function Tabelas() {
                         </div>
                         {item.subRotas.map((subitem, index) =>
                             <div key={index} id={item.subRef[index]} className="tabecontent tabelinhaP">
-                                <h3>{subitem}</h3>
-                                <p> {subitem} is the capital of France.</p>
+                                <Card />
+                                <Card />
+                                <div className="mais">
+                                    <div className="subtabela">
+                                        <SubTabela />
+                                    </div>
+                                    <button className="vermais" onClick={(e) => VerMais(e)}>Ver mais</button>
+                                </div>
                             </div>
+
                         )}
                     </div>
                 )}
