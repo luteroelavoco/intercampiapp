@@ -74,15 +74,15 @@ export default function Headers() {
                     </div>
                 </div>
                 <div className="toggle">
-                    <label for="toggle" style={{ color: '#161616' }} ><span> &#9776;</span> <a style={{ color: '#161616' }}>MENU</a> </label>
+                    <label htmlFor="toggle" style={{ color: '#161616' }} ><span> &#9776;</span> <a style={{ color: '#161616' }}>MENU</a> </label>
                 </div>
                 <div className="nave">
                     <input type="checkbox" id="toggle"></input>
                     <div className="menu">
                         <ul>
-                            {menus.map(item =>
+                            {menus.map((item,index) =>
 
-                                <li key={item.id}>
+                                <li key={index}>
                                     <Link
                                         style={{ color: '#161616' }}
                                         activeClass="active"

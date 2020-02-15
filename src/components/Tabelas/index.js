@@ -93,9 +93,9 @@ export default function Tabelas({ tabs, tabsPub }) {
         <div className="rotas">
             <div className="tabe">
                 {tabs.map(item =>
-                    <button key={item.id} className={item.id === 1 ? "tabelinks defaultOpen" : "tabelinks"} onClick={(e) => openTabela(e, item.ref)}> {item.origem} <i class="fas fa-exchange-alt"> </i> {item.destino}</button>
+                    <button key={item.id} className={item.id === 1 ? "tabelinks defaultOpen" : "tabelinks"} onClick={(e) => openTabela(e, item.ref)}> {item.origem} <i className="fas fa-exchange-alt"> </i> {item.destino}</button>
                 )}
-                <button className="tabelinks" onClick={(e) => openTabela(e, 'Rota4')}><i class="fas fa-bus"></i> Transporte público</button>
+                <button className="tabelinks" onClick={(e) => openTabela(e, 'Rota4')}><i className="fas fa-bus"></i> Transporte público</button>
             </div>
             {tabs.map(item =>
                 <div key={item.id} id={item.ref} className="tabecontent tabela">
@@ -106,8 +106,8 @@ export default function Tabelas({ tabs, tabsPub }) {
                     </div>
                     {item.subRotas.map((subitem, index) =>
                         <div key={index} id={subitem.ref} className="tabecontent tabelinha">
-                            <Card origem={item.origem} destino={item.destino} />
-                            <Card origem={item.destino} destino={item.origem}/>
+                              <Card origem={item.origem} destino={item.destino} horario={subitem.origem} />
+                              <Card origem={item.destino} destino={item.origem} horario={subitem.destino}/>
                             <div className="mais">
                                 <div className="subtabela">
                                     <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />
@@ -135,10 +135,10 @@ export default function Tabelas({ tabs, tabsPub }) {
                         {item.subRotas.map((subitem, index) =>
                             <div key={index} id={subitem.ref} className="tabecontent tabelinhaP">
                                 <Card origem={item.origem} destino={item.destino} />
-                                <Card origem={item.destino} destino={item.origem}/>
+                                <Card origem={item.destino} destino={item.origem} />
                                 <div className="mais">
                                     <div className="subtabela">
-                                        <SubTabela origem={item.origem} destino ={item.destino} subRotas={subitem}/>
+                                        <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />
                                     </div>
                                     <button className="vermais" onClick={(e) => VerMais(e)}>Ver mais</button>
                                 </div>

@@ -16,8 +16,8 @@ export default function Card({ news }) {
                         <h2>{item.subtitle}</h2>
                         <p>{item.description}</p>
                         <div className="baixo">
-                            <label> <i class="far fa-clock"></i> {item.time} </label>
-                            <label style={{ marginLeft: '20px' }}><i class="fas fa-eye"></i> {item.views}</label>
+                            <label> <i className="far fa-clock"></i> {item.time} </label>
+                            <label style={{ marginLeft: '20px' }}><i className="fas fa-eye"></i> {item.views}</label>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./index.css";
 import Tabela from "../../components/Tabelas";
 export default function Rotas() {
+    
     const [tabs, setTabs] = useState([
         {
             id: 1,
@@ -11,8 +12,8 @@ export default function Rotas() {
             subRotas: [{
                 name: "Rota A",
                 ref: "Rota1A",
-                origem: ["07:35", "08:10","08:45","09:30","10:30","11:15","11:50"],
-                destino: ["21:10", "21:40"]
+                origem: ["21:00", "21:10","21:15","21:20","21:30","21:35","21:50"],
+                destino:["21:00", "21:10","21:15","21:20","21:30","21:35","21:50"],
             },
             {
                 name: "Rota B",
