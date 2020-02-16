@@ -28,6 +28,13 @@ export default function Headers() {
             active: false,
             offset: -260,
         },
+        {
+            id: 3,
+            title: "Contactar",
+            href: "contactar",
+            active: false,
+            offset: -260,
+        },
 
 
 

@@ -1,0 +1,40 @@
+
+.contactar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contactar img {
+    width: 100px;
+}
+@media only screen and (max-width: 1400px){
+    .contactar img{
+        width: 600px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .contactar{
+        display: flex;
+        flex-direction: column;
+    }
+    .contactar img{
+        width: 100vw;
+    }
+}
+
+.contactar .formulario{
+    width: 100%;
+    padding: 2px;
+}
+
+.contactar .formulario .top {
+    background-color: #444444;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contactar .formulario .top label{
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -134,8 +134,8 @@ export default function Tabelas({ tabs, tabsPub }) {
                         </div>
                         {item.subRotas.map((subitem, index) =>
                             <div key={index} id={subitem.ref} className="tabecontent tabelinhaP">
-                                <Card origem={item.origem} destino={item.destino} />
-                                <Card origem={item.destino} destino={item.origem} />
+                                <Card origem={item.origem} destino={item.destino} horario={subitem.origem} />
+                                <Card origem={item.destino} destino={item.origem}horario={subitem.destino} />
                                 <div className="mais">
                                     <div className="subtabela">
                                         <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />
