@@ -7,7 +7,8 @@
     font-family: 'Poppins', sans-serif;
     background: white;
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
+    padding-top: 0;
     flex-direction: column;
     width: 100%;
 }

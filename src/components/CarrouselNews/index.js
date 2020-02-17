@@ -3,12 +3,12 @@ import './index.css';
 import { Carousel } from 'react-materialize';
 export default function Card({ news }) {
     return (
-        <Carousel className="carousel">
+        <Carousel className="carousel" >
             {news.map(item =>
-                <div key={item.id} className="carousel item">
+                <div key={item.id} className="carousel item" >
                     <div className="topo">
                         <div className="title">{item.info}</div>
-                        <img src={item.img} alt="Avatar" style={{ width: '100%' }} />
+                        <img src={item.img} alt="Avatar" style={{ width: '100%' }}  />
                         <div className="date"><span>{item.day} <br /> {item.month}</span> </div>
                     </div>
                     <div className="info">

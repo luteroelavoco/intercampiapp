@@ -6,10 +6,12 @@ export default function Footer() {
     return (
         <div className="Footer">
             <div className="contactar">
-                <div className="imagem">
+                <div className="imagem"  data-aos="fade-up"
+     data-aos-duration="2000">
                     <img src={capa} />
                 </div>
-                <div className="formulario">
+                <div className="formulario"  data-aos="fade-up"
+     data-aos-duration="2000">
                     <div className="top">
                         <label style={{ color: 'white' }}> <i className="fas fa-edit"></i> Entrar em contacto</label>
                     </div>

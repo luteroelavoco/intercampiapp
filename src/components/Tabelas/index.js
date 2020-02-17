@@ -90,7 +90,9 @@ export default function Tabelas({ tabs, tabsPub }) {
             elements[i].style.display = "none";
     });
     return (
-        <div className="rotas">
+        <div className="tabelas_rotas" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <div className="tabe">
                 {tabs.map(item =>
                     <button key={item.id} className={item.id === 1 ? "tabelinks defaultOpen" : "tabelinks"} onClick={(e) => openTabela(e, item.ref)}> {item.origem} <i className="fas fa-exchange-alt"> </i> {item.destino}</button>
@@ -106,8 +108,8 @@ export default function Tabelas({ tabs, tabsPub }) {
                     </div>
                     {item.subRotas.map((subitem, index) =>
                         <div key={index} id={subitem.ref} className="tabecontent tabelinha">
-                              <Card origem={item.origem} destino={item.destino} horario={subitem.origem} />
-                              <Card origem={item.destino} destino={item.origem} horario={subitem.destino}/>
+                            <Card origem={item.origem} destino={item.destino} horario={subitem.origem} />
+                            <Card origem={item.destino} destino={item.origem} horario={subitem.destino} />
                             <div className="mais">
                                 <div className="subtabela">
                                     <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />
@@ -135,7 +137,7 @@ export default function Tabelas({ tabs, tabsPub }) {
                         {item.subRotas.map((subitem, index) =>
                             <div key={index} id={subitem.ref} className="tabecontent tabelinhaP">
                                 <Card origem={item.origem} destino={item.destino} horario={subitem.origem} />
-                                <Card origem={item.destino} destino={item.origem}horario={subitem.destino} />
+                                <Card origem={item.destino} destino={item.origem} horario={subitem.destino} />
                                 <div className="mais">
                                     <div className="subtabela">
                                         <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />

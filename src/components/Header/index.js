@@ -63,11 +63,15 @@ export default function Headers() {
 
     return (
         <div className="containerHeader" style={{paddingBottom:'0px', zIndex:'1000'}}>
-            <div className="topo_info">
-                <div className="left">
+            <div className="topo_info ">
+                <div className="left" data-aos="fade-right"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
                     <label style={{ color: 'white' }}> Segunda à sexta das 6:30 até as 22:30 </label>
                 </div>
-                <div className="right">
+                <div className="right" data-aos="fade-left"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
                     <label style={{ color: 'white' }}>  Liga para nós +55 85 9123-9876</label>
                 </div>
             </div>
