@@ -2,4 +2,31 @@
     margin-top: 50px;
     background-color: white;
     padding-top: 0.10px;
+    margin-bottom: 0;
+}
+
+.footer .bottom label{
+    font-size: 14px;
+}
+.footer .bottom a{
+    transition: 0.4s;
+    font-weight: bold;
+}
+.footer .bottom  label a:hover{
+    color: #2CC185;
+}
+
+.footer .bottom{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+}
+
+@media only screen and (max-width: 991px){
+    .footer .bottom{
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -8,7 +8,7 @@ export default function Acerca() {
                 <i className="fas fa-question"></i>
                 <h3>O que é o intercampi?</h3>
                 <p>
-                    intercampi é uma aplicação que ajuda os alunos da  Unilab a terem informções relativas ao horário do ônibus.
+                    intercampi é uma aplicação disponivel na Play Store que ajuda os alunos da  Unilab a terem informções relativas ao horário do ônibus.
                  </p>
             </div>
             <div className="item">

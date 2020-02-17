@@ -2,6 +2,7 @@
 .contactar{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #bbbbbb;
 }
 
 .contactar img {
@@ -21,17 +22,52 @@
         width: 100vw;
     }
 }
+@media only screen and (max-width: 479px){
+    .contactar .imagem{
+        display: none;
+    }
+    .contactar{
+        background-color: #d3dbde ;
+    }
+}
 
 .contactar .formulario{
     width: 100%;
     padding: 2px;
+    
 }
+
+.contactar .formulario form{
+    background-color: #e2e2e2;
+    padding: 10px 10px 8px 10px;
+    height: 100%;
+
+}
+
+.contactar .formulario form button{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background-color: #2CC185;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.contactar .formulario form button:hover{
+    border: 1px solid #2CC185;
+    background-color:white;
+    color: #2CC185;
+  }
+
 
 .contactar .formulario .top {
     background-color: #444444;
     padding: 15px;
-    width: 100%;
-    border-radius: 5px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 }
 
 .contactar .formulario .top label{
