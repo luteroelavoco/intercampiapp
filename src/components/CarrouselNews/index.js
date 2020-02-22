@@ -2,10 +2,14 @@ import React from 'react';
 import './index.css';
 import { Carousel } from 'react-materialize';
 export default function Card({ news }) {
+    if(news.length == 0)
+    return(
+        <></>
+    )
     return (
         <Carousel className="carousel" >
-            {news.map(item =>
-                <div key={item.id} className="carousel item" >
+            {news.map((item, index) =>
+                <div key={index} className="carousel item" >
                     <div className="topo">
                         <div className="title">{item.info}</div>
                         <img src={item.img} alt="Avatar" style={{ width: '100%' }}  />
@@ -17,7 +21,7 @@ export default function Card({ news }) {
                         <p>{item.description}</p>
                         <div className="baixo">
                             <label> <i className="far fa-clock"></i> {item.time} </label>
-                            <label style={{ marginLeft: '20px' }}><i className="fas fa-eye"></i> {item.views}</label>
+                            <label style={{ marginLeft: '20px', display:'none' }}><i className="fas fa-eye"></i> {item?.views}</label>
                         </div>
                     </div>
                 </div>

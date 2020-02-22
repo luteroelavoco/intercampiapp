@@ -77,3 +77,9 @@
     text-align: left;
     
 }
+
+@media only screen and (max-width: 991px){
+    .carousel .carousel-item{
+        cursor: none;
+    }
+} 

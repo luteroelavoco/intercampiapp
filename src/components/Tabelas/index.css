@@ -60,12 +60,30 @@
   }
 
   /* outra tab */
+
+  .invisible{
+    display: none;
+  }
   ._tab{
     overflow: hidden;
     background-color: #f1f1f1;
     text-align: center;
+  }
+  .tam4{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+  }
+  .tam1{
+    display: grid;
+    grid-template-columns: 12fr;
+  }
+  .tam2{
     display: grid;
     grid-template-columns: 6fr 6fr;
+  }
+  .tam3{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
   }
   ._tabelinha{
     overflow: hidden;

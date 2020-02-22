@@ -25,7 +25,7 @@ export default function Tabelas({ tabs, tabsPub }) {
         document.getElementById(rotaName).style.display = "block";
         evt.currentTarget.className += " active";
         var filho = document.getElementsByClassName("_tablinks");
-        pos *= 2;
+        pos *= 4;
         filho[pos].click();
     }
     function openTab(evt, rotaName) {
@@ -91,8 +91,8 @@ export default function Tabelas({ tabs, tabsPub }) {
     });
     return (
         <div className="tabelas_rotas" data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <div className="tabe">
                 {tabs.map(item =>
                     <button key={item.id} className={item.id === 1 ? "tabelinks defaultOpen" : "tabelinks"} onClick={(e) => openTabela(e, item.ref)}> {item.origem} <i className="fas fa-exchange-alt"> </i> {item.destino}</button>
@@ -101,9 +101,9 @@ export default function Tabelas({ tabs, tabsPub }) {
             </div>
             {tabs.map(item =>
                 <div key={item.id} id={item.ref} className="tabecontent tabela">
-                    <div className="tabe _tab">
-                        {item.subRotas.map((subitem, index) =>
-                            <button key={index} className="_tablinks" onClick={(e) => openTab(e, subitem.ref)}>{subitem.name} </button>
+                    <div className={item.class}>
+                        {item.subRotas.map((subitem, index) =>     
+                            <button key={index} className={subitem.class} onClick={(e) => openTab(e, subitem.ref)}>{subitem.name} </button>
                         )}
                     </div>
                     {item.subRotas.map((subitem, index) =>
@@ -122,7 +122,7 @@ export default function Tabelas({ tabs, tabsPub }) {
                 </div>
             )}
             <div id="Rota4" className="tabecontent tabela">
-                <div className="tabe _tab">
+                <div className="tabe _tab tam2">
                     {tabsPub.map((item) =>
                         <button key={item.id} className="_tablinks" onClick={(e) => openTab(e, item.ref)}>{item.origem}- {item.destino} {item.rodoviario} </button>
                     )}

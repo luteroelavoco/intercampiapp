@@ -7,9 +7,9 @@ export default function Acerca() {
             <div className="item" data-aos="fade-up"
                 data-aos-duration="2000">
                 <i className="fas fa-question"></i>
-                <h3>O que é o intercampi?</h3>
+                <h3>O que é o Intercampi?</h3>
                 <p>
-                    intercampi é uma aplicação disponivel na Play Store que ajuda os alunos da  Unilab a terem informções relativas ao horário do ônibus.
+                    Intercampi é uma aplicação disponivel na Play Store que ajuda os alunos da  Unilab a terem informções relativas ao horário do ônibus.
                  </p>
             </div>
             <div className="item" data-aos="fade-up"
@@ -25,7 +25,7 @@ export default function Acerca() {
                 <i className="far fa-bell"></i>
                 <h3>Pontualidade</h3>
                 <p>
-                    Saia de casa sabendo o horário certo que o Ônibus passa, o intercampi evita que tu percas o seu tempo na parada. Chega na hora e no momento certo.
+                    Saia de casa sabendo o horário certo que o Ônibus passa, o Intercampi evita que tu percas o seu tempo na parada. Chega na hora e no momento certo.
                  </p>
             </div>
 

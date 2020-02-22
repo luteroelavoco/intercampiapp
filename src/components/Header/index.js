@@ -72,7 +72,7 @@ export default function Headers() {
                 <div className="right" data-aos="fade-left"
                      data-aos-offset="300"
                      data-aos-easing="ease-in-sine">
-                    <label style={{ color: 'white' }}>  Liga para nós +55 85 9123-9876</label>
+                    <label style={{ color: 'white' }}>  Liga para nós +55 85 9956-2461</label>
                 </div>
             </div>
             <div className="header" id="myHeader">
