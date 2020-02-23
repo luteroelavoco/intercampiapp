@@ -45,9 +45,8 @@ export default function CardTime({ origem, destino, horario }) {
         else{
             let actminute = horario[index].split(':')[1];
             let hour = (24 - hora) + parseInt(horario[index].split(':')[0]);
-            let minut = Math.max(actminute,minuto) - Math.min(actminute,minuto);
             hour *=60;
-            return hour + minut;
+            return hour - parseInt(minuto) + parseInt(actminute);
         }
     }
 
@@ -55,7 +54,9 @@ export default function CardTime({ origem, destino, horario }) {
         if(a > 60){
             return Math.floor(a/60)+"h:"+(a%60)+" min";
         }
-        return a+" min";
+        if(a > 0)
+            return a+" min";
+        return "agora";
     }
 
     function eProximo(b){

@@ -5,7 +5,7 @@ export default function SubTabelas({ origem, destino, subRotas }) {
     return (
         <div className="card">
             <div className="tophorarios">
-                <label style={{ color: 'black' }}> <span>Nº</span></label>
+                <label style={{ color: 'black' }}> <span>Viagem</span></label>
                 <label style={{ color: 'black' }}><span>Saida:</span> {origem}</label>
                 <label style={{ color: 'black' }}><span>Saida:</span> {destino}</label>
             </div>

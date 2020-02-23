@@ -78,6 +78,23 @@ export default function Rotas() {
         tabes("tabsLabel_AP",3);
 
         // Fortaleza redenção Catraca
+
+        OrigensPub("Rodov2_sR_diaUtil",3,0);
+        DestinosPub("Rodov2_sF_diaUtil",3,0);
+        OrigensPub("Rodov2_sR_Sab",3,1);
+        DestinosPub("Rodov2_sF_Sab",3,1);
+        OrigensPub("Rodov2_sR_Dom",3,2);
+        DestinosPub("Rodov2_sF_Dom",3,2);
+
+        // Fortaleza redenção Rodoviario
+
+        OrigensPub("Rodov_sR_diaUtil",4,0);
+        DestinosPub("Rodov_sF_diaUtil",4,0);
+        OrigensPub("Rodov_sR_Sab",4,1);
+        DestinosPub("Rodov_sF_Sab",4,1);
+        OrigensPub("Rodov_sR_Dom",4,2);
+        DestinosPub("Rodov_sF_Dom",4,2);
+
         
     },[])
 
@@ -262,20 +279,20 @@ export default function Rotas() {
             subRotas: [{
                 name: "Dia útil",
                 ref: "diaA",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             },
             {
                 name: "SÁB",
                 ref: "sabA",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             },
             {
                 name: "DOM.",
                 ref: "domA",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             }
             ],
         },
@@ -288,20 +305,20 @@ export default function Rotas() {
             subRotas: [{
                 name: "Dia útil",
                 ref: "diaB",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             },
             {
                 name: "SÁB",
                 ref: "sabB",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             },
             {
                 name: "DOM.",
                 ref: "domB",
-                origem: ["21:10", "21:40"],
-                destino: ["21:10", "21:40"]
+                origem: [],
+                destino: []
             }
             ],
         }
