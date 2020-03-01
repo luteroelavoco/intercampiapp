@@ -107,10 +107,12 @@ export default function Rotas() {
                       if(item.id == id){
                           item.tab = (h.length == 0) ? 1 : h.length;
                           item.class = "tabe _tab tam"+item.tab;
+                          item.subRotas[0].name = h[0];
                       }
                       if(item.tab > 1){
                         for(var i = 0; i < item.tab; i++){
                             item.subRotas[i].class = "_tablinks";
+                            item.subRotas[i].name = h[i];
                         }
                       }
                       return item;
