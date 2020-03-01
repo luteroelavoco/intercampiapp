@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/intercampiapp/precache-manifest.56c668b14f6bc0aca5c0ec63a61b22a3.js"
+  "/intercampiapp/precache-manifest.7c8d16fed285682bdae4099a968d43fc.js"
 );
 
 self.addEventListener('message', (event) => {
