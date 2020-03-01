@@ -53,8 +53,8 @@ export default function Footer() {
                     <div className="top">
                         <label
                             style={{ color: 'white' }}>
-                            <i className="fas fa-edit"></i>
-                            Entrar em contacto</label>
+                             <i className="fas fa-edit">  </i> 
+                              Reportar problema</label>
                     </div>
                     <div className="row">
                         <form className="col s12" onSubmit={sendEmail}>

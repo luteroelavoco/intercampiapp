@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./index.css";
 
-export default function CardTime({ origem, destino, horario }) {
+export default function CardTime({ origem, destino, horario , cor="#2CC185" }) {
 
     const [anterior, setAnterior] = useState(0);
     const [proximo, setProximo] = useState(0);
@@ -95,7 +95,7 @@ export default function CardTime({ origem, destino, horario }) {
                 <hr />
                 <div className="bottom">
                     <label style={{ color: 'black' }}>Anterior <br /> <span>{horario[anterior]}</span></label>
-                    <label className="actual" >Proximo <br /><span>{horario[proximo]}</span><br /> <i className="far fa-clock"> {getFaltaEmHora(falta)}</i></label>
+                    <label  style={{ color: cor }}>Proximo <br /><span>{horario[proximo]}</span><br /> <i className="far fa-clock"> {getFaltaEmHora(falta)}</i></label>
                     <label style={{ color: 'black' }}>Seguinte <br /> <span>{horario[seguinte]}</span></label>
                 </div>
             </div>

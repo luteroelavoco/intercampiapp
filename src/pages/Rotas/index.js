@@ -160,6 +160,8 @@ export default function Rotas() {
             destino: "Palmares",
             ref: "Rota1",
             tab:1,
+            theme : "active1",
+            color: "#007f5c",
             class :"tabe _tab tam4",
             subRotas: [{
                 class :"_tablinks ",
@@ -200,6 +202,8 @@ export default function Rotas() {
             destino: "Auroras",
             ref: "Rota2",
             class :"tabe _tab tam4",
+            theme : "active2",
+            color: "#8C1C13",
             tab:1,
             subRotas: [{
                 class :"_tablinks",
@@ -237,6 +241,8 @@ export default function Rotas() {
             destino: "Palmares",
             ref: "Rota3",
             class :"tabe _tab tam4",
+            theme : "active3",
+            color: "#C8963E",
             tab:1,
             subRotas: [{
                 class :"_tablinks",

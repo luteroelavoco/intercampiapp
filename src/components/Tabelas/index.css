@@ -41,6 +41,23 @@
     border-bottom: 5px solid  #2CC185;
     color: #2CC185;
   }
+  .tabe button.active1 {
+    background-color: white;
+    border-bottom: 5px solid #007f5c;
+    color: #007f5c;
+  }
+
+  .tabe button.active2 {
+    background-color: white;
+    border-bottom: 5px solid  #8C1C13;
+    color: #8C1C13;
+  }
+
+  .tabe button.active3 {
+    background-color: white;
+    border-bottom: 5px solid  #C8963E;
+    color: #C8963E;
+  }
   
   /* Style the tabe content */
   .tabecontent {
@@ -93,7 +110,7 @@
     grid-template-columns: 4fr 4fr 4fr;
   }
   
-  .mais .subtabela{
+  .subtabela{
     display: none;
   }
   .mais button{
@@ -110,6 +127,50 @@
     border: 1px solid #2CC185;
     background-color:white;
     color: #2CC185;
+  }
+
+  .mais1 button{
+    background-color: #007f5c;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .mais1 button:hover{
+    border: 1px solid #007f5c;
+    background-color:white;
+    color:#007f5c;
+  }
+  .mais2 button{
+    background-color: #8C1C13;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .mais2 button:hover{
+    border: 1px solid #8C1C13;
+    background-color:white;
+    color:#8C1C13;
+  }
+
+  .mais3 button{
+    background-color: #C8963E;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .mais3 button:hover{
+    border: 1px solid #C8963E;
+    background-color:white;
+    color:#C8963E;
   }
   .none{
     display: none;

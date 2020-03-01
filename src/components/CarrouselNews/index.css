@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
 .carousel{
-    transform: translateY(-100px) ;
     height: 600px;
     perspective: 600px;
     text-align: center;

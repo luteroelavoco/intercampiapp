@@ -1,7 +1,6 @@
 import React from 'react';
 import "./index.css";
 export default function Acerca() {
-
     return (
         <div className="acerca" >
             <div className="item" data-aos="fade-up"
@@ -9,7 +8,7 @@ export default function Acerca() {
                 <i className="fas fa-question"></i>
                 <h3>O que é o Intercampi?</h3>
                 <p>
-                    Intercampi é uma aplicação disponivel na Play Store que ajuda os alunos da  Unilab a terem informções relativas ao horário do ônibus.
+                    Intercampi é uma aplicação disponivel na Play Store que ajuda os alunos da  Unilab a terem informações relativas ao horário do ônibus.
                  </p>
             </div>
             <div className="item" data-aos="fade-up"
@@ -17,7 +16,7 @@ export default function Acerca() {
                 <i className="fab fa-angellist"></i>
                 <h3>Facilidade</h3>
                 <p>
-                    O intercampi trata a responsablidade do controle do horário com muito facilidade, dentro do aplicativo tens acesso aos horários em poucos cliques.
+                    O Intercampi trata a responsabilidade do controle do horário com muito facilidade, dentro do aplicativo tens acesso aos horários em poucos cliques.
                  </p>
             </div>
             <div className="item" data-aos="fade-up"

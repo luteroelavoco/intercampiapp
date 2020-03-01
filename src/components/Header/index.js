@@ -23,14 +23,14 @@ export default function Headers() {
         },
         {
             id: 2,
-            title: "Rotas",
+            title: "Horário",
             href: "rotas",
             active: false,
             offset: -260,
         },
         {
             id: 3,
-            title: "Contactar",
+            title: "Contatar",
             href: "contactar",
             active: false,
             offset: -260,
@@ -72,7 +72,7 @@ export default function Headers() {
                 <div className="right" data-aos="fade-left"
                      data-aos-offset="300"
                      data-aos-easing="ease-in-sine">
-                    <label style={{ color: 'white' }}>  Liga para nós +55 85 9956-2461</label>
+                    <label style={{ color: 'white' }}>  Contatar em edeson.alves@hotmail.com</label>
                 </div>
             </div>
             <div className="header" id="myHeader">

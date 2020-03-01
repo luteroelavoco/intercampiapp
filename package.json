@@ -1,4 +1,5 @@
 {
+  "homepage": "http://cientista1.github.io/intercampiapp",
   "name": "intercampiapp",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,7 @@
     "aos": "^3.0.0-beta.6",
     "axios": "^0.19.2",
     "emailjs-com": "^2.4.1",
+    "gh-pages": "^2.2.0",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -19,6 +21,8 @@
     "swiper": "^5.3.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

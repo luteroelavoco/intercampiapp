@@ -11,6 +11,8 @@
   .sticky + .content {
     padding-top: 102px;
   }
+
+
 .topo_info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,14 +45,13 @@
     padding-right:8%;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
     width: 100%;
-    z-index: 2;
+    z-index: 10000;
 }
 
 .toggle label{
     color: white;
     font-size: 16px;    
     display: none;
-    margin-top: -25px;
     font-family: 'Poppins', sans-serif;
     text-align: justify;
     opacity: 0.5;
@@ -59,6 +60,8 @@
 
 .menu{
     margin-right: 10vw;
+    margin-bottom: 15px;
+    margin-top: -6px;
 }
 .toggle span{
     padding-right: 2px;
@@ -67,6 +70,46 @@
 
 #toggle{
     display: none;
+}
+
+
+@media only screen and (max-width:991px){
+  
+   .header{
+       display: grid;
+       grid-template-columns: 11fr 1fr;
+       z-index: 1000;
+   }
+   
+   .menu{
+       padding-top: 20px;
+       color: #161616;
+       display: none;
+      
+   }
+    .toggle label{
+        display: flex;
+        cursor: pointer;
+        flex-direction: row;
+        margin-top: -6px;
+        z-index: 10000;
+    }
+
+    .toggle a{
+       margin-top: 3.8px;
+       margin-left: 2px;
+    }
+
+    .menu a{
+        display: block;
+       
+    }
+    
+
+    #toggle:checked + .menu{
+        display: block;
+       
+    }
 }
 
 @media only screen and (max-width: 671px){
@@ -88,43 +131,6 @@
     }
     
 }
-@media only screen and (max-width:991px){
-  
-   .header{
-       display: grid;
-       grid-template-columns: 11fr 1fr;
-       z-index: 1000;
-   }
-   
-   .menu{
-       padding-top: 20px;
-       color: #161616;
-       display: none;
-      
-   }
-    .toggle label{
-        display: flex;
-        cursor: pointer;
-        flex-direction: row;
-        margin-top: 0px;
-    }
-
-    .toggle a{
-       margin-top: 3.8px;
-       margin-left: 2px;
-    }
-
-    .menu a{
-        display: block;
-       
-    }
-    
-
-    #toggle:checked + .menu{
-        display: block;
-       
-    }
-}
 
 
 
@@ -138,12 +144,12 @@
 }
 
 .brand_header .name{
-    padding-top: 10px;
+    padding-top: 6px;
     padding-left: 8px;
 }
 .header .brand_header img{
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .brand_header{
