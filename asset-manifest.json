@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/intercampiapp/static/css/main.a48857ee.chunk.css",
-    "main.js": "/intercampiapp/static/js/main.0f114609.chunk.js",
-    "main.js.map": "/intercampiapp/static/js/main.0f114609.chunk.js.map",
+    "main.js": "/intercampiapp/static/js/main.ee2993fd.chunk.js",
+    "main.js.map": "/intercampiapp/static/js/main.ee2993fd.chunk.js.map",
     "runtime-main.js": "/intercampiapp/static/js/runtime-main.e89bcd12.js",
     "runtime-main.js.map": "/intercampiapp/static/js/runtime-main.e89bcd12.js.map",
     "static/css/2.06565635.chunk.css": "/intercampiapp/static/css/2.06565635.chunk.css",
     "static/js/2.4e3ea3f6.chunk.js": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js",
     "static/js/2.4e3ea3f6.chunk.js.map": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js.map",
     "index.html": "/intercampiapp/index.html",
-    "precache-manifest.7c8d16fed285682bdae4099a968d43fc.js": "/intercampiapp/precache-manifest.7c8d16fed285682bdae4099a968d43fc.js",
+    "precache-manifest.329581d9041b2c86a262870360bb7615.js": "/intercampiapp/precache-manifest.329581d9041b2c86a262870360bb7615.js",
     "service-worker.js": "/intercampiapp/service-worker.js",
     "static/css/2.06565635.chunk.css.map": "/intercampiapp/static/css/2.06565635.chunk.css.map",
     "static/css/main.a48857ee.chunk.css.map": "/intercampiapp/static/css/main.a48857ee.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.06565635.chunk.css",
     "static/js/2.4e3ea3f6.chunk.js",
     "static/css/main.a48857ee.chunk.css",
-    "static/js/main.0f114609.chunk.js"
+    "static/js/main.ee2993fd.chunk.js"
   ]
 }
