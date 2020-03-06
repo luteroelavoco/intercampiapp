@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea4152b4a0c6e8b2073211ff0ee946e9",
+    "revision": "175a37d8c2173d6d71a8fc8860fdc61b",
     "url": "/intercampiapp/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intercampiapp/static/css/2.06565635.chunk.css"
   },
   {
-    "revision": "0dcb856d62c4c51433c5",
-    "url": "/intercampiapp/static/css/main.a48857ee.chunk.css"
+    "revision": "5f8ed92ed3e10534f9eb",
+    "url": "/intercampiapp/static/css/main.853594e6.chunk.css"
   },
   {
     "revision": "db6f1e473c262538caf4",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0dcb856d62c4c51433c5",
-    "url": "/intercampiapp/static/js/main.2f301f11.chunk.js"
+    "revision": "5f8ed92ed3e10534f9eb",
+    "url": "/intercampiapp/static/js/main.cbffcec2.chunk.js"
   },
   {
     "revision": "ef884f548e88c1873db9",

@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/intercampiapp/static/css/main.a48857ee.chunk.css",
-    "main.js": "/intercampiapp/static/js/main.2f301f11.chunk.js",
-    "main.js.map": "/intercampiapp/static/js/main.2f301f11.chunk.js.map",
+    "main.css": "/intercampiapp/static/css/main.853594e6.chunk.css",
+    "main.js": "/intercampiapp/static/js/main.cbffcec2.chunk.js",
+    "main.js.map": "/intercampiapp/static/js/main.cbffcec2.chunk.js.map",
     "runtime-main.js": "/intercampiapp/static/js/runtime-main.e89bcd12.js",
     "runtime-main.js.map": "/intercampiapp/static/js/runtime-main.e89bcd12.js.map",
     "static/css/2.06565635.chunk.css": "/intercampiapp/static/css/2.06565635.chunk.css",
     "static/js/2.4e3ea3f6.chunk.js": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js",
     "static/js/2.4e3ea3f6.chunk.js.map": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js.map",
     "index.html": "/intercampiapp/index.html",
-    "precache-manifest.343b66445547f2e1d79f22e0fca6a6e4.js": "/intercampiapp/precache-manifest.343b66445547f2e1d79f22e0fca6a6e4.js",
+    "precache-manifest.4cd583d9a9f1ee9ead1b8a0f12796b45.js": "/intercampiapp/precache-manifest.4cd583d9a9f1ee9ead1b8a0f12796b45.js",
     "service-worker.js": "/intercampiapp/service-worker.js",
     "static/css/2.06565635.chunk.css.map": "/intercampiapp/static/css/2.06565635.chunk.css.map",
-    "static/css/main.a48857ee.chunk.css.map": "/intercampiapp/static/css/main.a48857ee.chunk.css.map",
+    "static/css/main.853594e6.chunk.css.map": "/intercampiapp/static/css/main.853594e6.chunk.css.map",
     "static/js/2.4e3ea3f6.chunk.js.LICENSE.txt": "/intercampiapp/static/js/2.4e3ea3f6.chunk.js.LICENSE.txt",
     "static/media/capa.png": "/intercampiapp/static/media/capa.3ab4067f.png",
     "static/media/logo.png": "/intercampiapp/static/media/logo.f4f2df07.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.e89bcd12.js",
     "static/css/2.06565635.chunk.css",
     "static/js/2.4e3ea3f6.chunk.js",
-    "static/css/main.a48857ee.chunk.css",
-    "static/js/main.2f301f11.chunk.js"
+    "static/css/main.853594e6.chunk.css",
+    "static/js/main.cbffcec2.chunk.js"
   ]
 }
