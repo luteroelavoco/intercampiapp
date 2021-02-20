@@ -7,7 +7,7 @@ export default function Footer() {
             <Contact/>
             <div className="bottom">
                 <label style={{color:'black'}}>@Copyright - <a href="https://www.linkedin.com/in/edeson-bizerril-981369b8/" target="_blank"> Edeson Bizerril</a>. Todos direitos reservados</label>
-                <label  style={{color:'black'}}> Desenvolvido por <a href="https://www.facebook.com/projetocasavivaa" target="_blank">Prokecto casa viva</a></label>
+                <label  style={{color:'black'}}> Desenvolvido por <a href="https://www.facebook.com/projetocasavivaa" target="_blank">Projeto casa viva</a></label>
             </div>
         </div>
     )
