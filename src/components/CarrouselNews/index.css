@@ -20,6 +20,7 @@
 
 .carousel .carousel-item img{
     width: 200px;
+    max-height: 226px;
 }
 .carousel .carousel-item .topo .date{
     background: #2CC185;
