@@ -28,7 +28,7 @@ export default function Tabelas({ tabs, tabsPub }) {
         document.getElementById(rotaName).style.display = "block";
         evt.currentTarget.className += " "+theme;
         var filho = document.getElementsByClassName("_tablinks");
-        pos *= 4;
+        pos *= 2;
         filho[pos].click();
     }
     function openTab(evt, rotaName,theme="active") {
@@ -115,7 +115,8 @@ export default function Tabelas({ tabs, tabsPub }) {
                     {item.subRotas.map((subitem, index) =>
                         <div key={index} id={subitem.ref} className="tabecontent tabelinha">
                             <Card origem={item.origem} destino={item.destino} horario={subitem.origem} cor={item.color} />
-                            <Card origem={item.destino} destino={item.origem} horario={subitem.destino}  cor={item.color}/>
+                            {/* Hoje não existe mais rota de ida e volta */}
+                            {/* <Card origem={item.destino} destino={item.origem} horario={subitem.destino}  cor={item.color}/> */}
                             <div className={"mais"+item.id}>
                                 <div className="subtabela">
                                     <SubTabela origem={item.origem} destino={item.destino} subRotas={subitem} />

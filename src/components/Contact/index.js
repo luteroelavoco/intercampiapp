@@ -16,8 +16,8 @@ export default function Footer() {
                 "user_email": email,
                 "message": message
             }
-            var service_id = "gmail";
-            var template_id = "template_g2LYsXU9";
+            var service_id = process.env.service_id;
+            var template_id = process.env.template_g2LYsXU9;
             if (validateEmail(email)) {
                 emailjs.send(service_id, template_id, template_params);
                 setName("");

@@ -1,341 +1,353 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import Tabela from "../../components/Tabelas";
-import axios from 'axios';
 export default function Rotas() {
-
-    ///Rotas da saída Auroras e Palmares
-    const[isloading , setIsloading] = useState(true);
-
-    function Origens(rotaname, indexRota, indexSubrota){
-        var horario =[];
-        axios.get("https://intercampi-5823f.firebaseio.com/horarios/" + rotaname + ".json").then(
-              res =>{
-                  const date = res.data;
-                  horario = date.split(",");
-                  const element = tabs.filter(item=>{
-                      if(item.id == indexRota){
-                          item.subRotas[indexSubrota].origem = horario;
-                      }
-                      return item;
-                  })
-                  setTabs(element);
-              }
-          );   
-    }
-    function Destinos(rotaname, indexRota, indexSubrota){
-        var horario =[];
-        axios.get("https://intercampi-5823f.firebaseio.com/horarios/" + rotaname + ".json").then(
-              res =>{
-                  const date = res.data;
-                  horario = date.split(",");
-                  const element = tabs.filter(item=>{
-                      if(item.id == indexRota){
-                          item.subRotas[indexSubrota].destino = horario;
-                      }
-                      return item;
-                  })
-                  setTabs(element);
-              }
-          );   
-    }
-
-    useEffect(()=>{
-
-        // Rotas Auroras Palmares 
-        Origens("AP_sA_rA",3,0);
-        Origens("AP_sA_rB",3,1);
-        Origens("AP_sA_rC",3,2);
-        Origens("AP_sA_rB",3,3);
-        Destinos("AP_sP_rA",3,0);
-        Destinos("AP_sP_rB",3,1);
-        Destinos("AP_sP_rC",3,2);
-        Destinos("AP_sP_rD",3,3);
-        
-        // Liberdade Auroras
-        Origens("LA_sL_rA",2,0);
-        Origens("LA_sL_rB",2,1);
-        Origens("LA_sL_rC",2,2);
-        Origens("LA_sL_rD",2,3);
-        Destinos("LA_sA_rA",2,0);
-        Destinos("LA_sA_rB",2,1);
-        Destinos("LA_sA_rC",2,2);
-        Destinos("LA_sA_rD",2,3);
-
-        // Liberdade Palmares
-        Origens("LP_sL_rA",1,0);
-        Origens("LP_sL_rB",1,1);
-        Origens("LP_sL_rC",1,2);
-        Origens("LP_sL_rD",1,3);
-        Destinos("LP_sP_rA",1,0);
-        Destinos("LP_sP_rA",1,1);
-        Destinos("LP_sP_rA",1,2);
-        Destinos("LP_sP_rA",1,3);
-
-        //
-        tabes("tabsLabel_LP",1);
-        tabes("tabsLabel_LA",2);
-        tabes("tabsLabel_AP",3);
-
-        // Fortaleza redenção Catraca
-
-        OrigensPub("Rodov2_sR_diaUtil",3,0);
-        DestinosPub("Rodov2_sF_diaUtil",3,0);
-        OrigensPub("Rodov2_sR_Sab",3,1);
-        DestinosPub("Rodov2_sF_Sab",3,1);
-        OrigensPub("Rodov2_sR_Dom",3,2);
-        DestinosPub("Rodov2_sF_Dom",3,2);
-
-        // Fortaleza redenção Rodoviario
-
-        OrigensPub("Rodov_sR_diaUtil",4,0);
-        DestinosPub("Rodov_sF_diaUtil",4,0);
-        OrigensPub("Rodov_sR_Sab",4,1);
-        DestinosPub("Rodov_sF_Sab",4,1);
-        OrigensPub("Rodov_sR_Dom",4,2);
-        DestinosPub("Rodov_sF_Dom",4,2);
-
-        
-    },[])
-
-    function tabes(label, id){
-        axios.get("https://intercampi-5823f.firebaseio.com/horarios/" + label + ".json").then(
-              res =>{
-                  const date =  res.data;
-                  var h = date.split(",");
-                  const element = tabs.filter(item=>{
-                      if(item.id == id){
-                          item.tab = (h.length == 0) ? 1 : h.length;
-                          item.class = "tabe _tab tam"+item.tab;
-                          item.subRotas[0].name = h[0];
-                      }
-                      if(item.tab > 1){
-                        for(var i = 0; i < item.tab; i++){
-                            item.subRotas[i].class = "_tablinks";
-                            item.subRotas[i].name = h[i];
-                        }
-                      }
-                      return item;
-                  })
-                  setTabs(element);
-              }
-          );   
-    }
-    // TransportePublico
-    function OrigensPub(rotaname, indexRota, indexSubrota){
-        var horario =[];
-        axios.get("https://intercampi-5823f.firebaseio.com/horarios/" + rotaname + ".json").then(
-              res =>{
-                  const date = res.data;
-                  horario = date.split(",");
-                  const element = tabsPub.filter(item=>{
-                      if(item.id == indexRota){
-                          item.subRotas[indexSubrota].origem = horario;
-                      }
-                      return item;
-                  })
-                  setTabsPub(element);
-              }
-          );   
-    }
-    function DestinosPub(rotaname, indexRota, indexSubrota){
-        var horario =[];
-        axios.get("https://intercampi-5823f.firebaseio.com/horarios/" + rotaname + ".json").then(
-              res =>{
-                  const date = res.data;
-                  horario = date.split(",");
-                  const element = tabsPub.filter(item=>{
-                      if(item.id == indexRota){
-                          item.subRotas[indexSubrota].destino = horario;
-                      }
-                      return item;
-                  })
-                  setTabsPub(element);
-              }
-          );   
-    }
-
-    const [tabs, setTabs] = useState([
+  const [tabs, setTabs] = useState([
+    {
+      id: 1,
+      origem: "Liberdade",
+      destino: "Palmares",
+      ref: "Rota1",
+      tab: 1,
+      theme: "active1",
+      color: "#007f5c",
+      class: "tabe _tab tam2",
+      subRotas: [
         {
-            id: 1,
-            origem: "Liberdade",
-            destino: "Palmares",
-            ref: "Rota1",
-            tab:1,
-            theme : "active1",
-            color: "#007f5c",
-            class :"tabe _tab tam4",
-            subRotas: [{
-                class :"_tablinks ",
-                name: "Rota A",
-                ref: "Rota1A",
-                origem: ["14:00", "15:10", "16:18", "17:28", "17:30", "17:35"],
-                destino: ["14:00", "15:10", "16:18", "17:28", "17:30", "17:35"],
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota B",
-                ref: "Rota1B",
-                origem: ["11:10", "11:40", "12:30", "14:10", "15:30"],
-                destino: ["11:10", "14:40"]
-            }
-                ,
-            {
-                class :"_tablinks invisible",
-                name: "Rota C",
-                ref: "Rota1C",
-                origem: ["11:10", "11:40", "12:30", "14:10", "15:30"],
-                destino: ["11:10", "14:40"]
-            }
-                ,
-            {
-                class :"_tablinks invisible",
-                name: "Rota D",
-                ref: "Rota1D",
-                origem: ["11:10", "11:40", "12:30", "14:10", "15:30"],
-                destino: ["11:10", "14:40"]
-            }
-            ],
-
+          class: "_tablinks ",
+          name: "Rota 01 A",
+          ref: "Rota101A",
+          origem: [
+            "07:20",
+            "08:05",
+            "09:00",
+            "09:45",
+            "10:30",
+            "11:15",
+            "12:00",
+            "12:45",
+            "13:30",
+            "14:30",
+            "15:15",
+            "16:15",
+            "17:00",
+            "17:45",
+            "18:30",
+            "19:00",
+            "19:30",
+            "20:00",
+            "20:45",
+            "21:30",
+            "22:00",
+            "22:30",
+          ],
+          destino: [
+            "07:35",
+            "08:20",
+            "09:15",
+            "10:00",
+            "10:45",
+            "11:30",
+            "12:15",
+            "13:00",
+            "13:45",
+            "14:45",
+            "15:30",
+            "16:30",
+            "17:15",
+            "18:00",
+            "18:45",
+            "19:15",
+            "19:45",
+            "20:15",
+            "21:15",
+            "21:45",
+            "22:15",
+          ],
         },
         {
-            id: 2,
-            origem: "Liberdade",
-            destino: "Auroras",
-            ref: "Rota2",
-            class :"tabe _tab tam4",
-            theme : "active2",
-            color: "#8C1C13",
-            tab:1,
-            subRotas: [{
-                class :"_tablinks",
-                name: "Rota A",
-                ref: "Rota2A",
-                origem: [],
-                destino: []
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota B",
-                ref: "Rota2B",
-                origem: [],
-                destino: []
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota C",
-                ref: "Rota2C",
-                origem: [],
-                destino: []
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota D",
-                ref: "Rota2D",
-                origem: [],
-                destino: []
-            }
-            ],
+          class: "_tablinks",
+          name: "Rota 01 B",
+          ref: "Rota101B",
+          origem: [
+            "07:35",
+            "08:20",
+            "09:15",
+            "10:00",
+            "10:45",
+            "11:30",
+            "12:15",
+            "13:00",
+            "13:45",
+            "14:45",
+            "15:30",
+            "16:30",
+            "17:15",
+            "18:00",
+            "18:30",
+            "19:00",
+            "19:30",
+            "20:00",
+            "20:45",
+            "21:30",
+            "22:00",
+            "22:30",
+          ],
+          destino: [
+            "07:50",
+            "08:35",
+            "09:30",
+            "10:15",
+            "11:00",
+            "11:45",
+            "12:30",
+            "13:15",
+            "14:00",
+            "15:00",
+            "15:45",
+            "16:45",
+            "17:30",
+            "18:15",
+            "18:45",
+            "19:15",
+            "19:45",
+            "20:15",
+            "21:15",
+            "21:45",
+            "22:15",
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      origem: "Auroras",
+      destino: "Liberdade",
+      ref: "Rota2",
+      class: "tabe _tab tam2",
+      theme: "active2",
+      color: "#8C1C13",
+      tab: 1,
+      subRotas: [
+        {
+          class: "_tablinks",
+          name: "Rota 01 B",
+          ref: "Rota201B",
+          origem: [
+            "07:20",
+            "08:05",
+            "09:00",
+            "09:45",
+            "10:30",
+            "11:15",
+            "12:00",
+            "12:45",
+            "13:30",
+            "14:30",
+            "15:15",
+            "16:15",
+            "17:00",
+            "17:45",
+          ],
+          destino: [
+            "07:35",
+            "08:20",
+            "09:15",
+            "10:00",
+            "10:45",
+            "11:30",
+            "12:15",
+            "13:00",
+            "13:45",
+            "14:45",
+            "15:30",
+            "16:30",
+            "17:15",
+            "18:00",
+          ],
         },
         {
-            id: 3,
-            origem: "Auroras",
-            destino: "Palmares",
-            ref: "Rota3",
-            class :"tabe _tab tam4",
-            theme : "active3",
-            color: "#C8963E",
-            tab:1,
-            subRotas: [{
-                class :"_tablinks",
-                name: "Rota A",
-                ref: "Rota3A",
-                origem: [],
-                destino: []
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota B",
-                ref: "Rota3B",
-                origem: [],
-                destino:[]
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota C",
-                ref: "Rota3C",
-                origem: [],
-                destino:[]
-            },
-            {
-                class :"_tablinks invisible",
-                name: "Rota D",
-                ref: "Rota3D",
-                origem: [],
-                destino: []
-            }
-            ],
-        }
-    ]);
-    const [tabsPub, setTabsPub] = useState([
+          class: "_tablinks",
+          name: "Rota 01 C",
+          ref: "Rota201C",
+          origem: [
+            "07:35",
+            "08:20",
+            "09:15",
+            "10:00",
+            "10:45",
+            "11:30",
+            "12:15",
+            "13:00",
+            "13:45",
+            "14:45",
+            "15:30",
+            "16:30",
+            "17:15",
+            "18:00",
+          ],
+          destino: [
+            "07:50",
+            "08:35",
+            "09:30",
+            "10:15",
+            "11:00",
+            "11:45",
+            "12:30",
+            "13:15",
+            "14:00",
+            "15:00",
+            "15:45",
+            "16:45",
+            "17:30",
+            "18:15",
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      origem: "Palmares",
+      destino: "Auroras",
+      ref: "Rota3",
+      class: "tabe _tab tam2",
+      theme: "active3",
+      color: "#C8963E",
+      tab: 1,
+      subRotas: [
         {
-            id: 3,
-            origem: "Redenção",
-            destino: "Fortaleza",
-            rodoviario: "(Catraca)",
-            ref: "Rota4A",
-            subRotas: [{
-                name: "Dia útil",
-                ref: "diaA",
-                origem: [],
-                destino: []
-            },
-            {
-                name: "SÁB",
-                ref: "sabA",
-                origem: [],
-                destino: []
-            },
-            {
-                name: "DOM.",
-                ref: "domA",
-                origem: [],
-                destino: []
-            }
-            ],
+          class: "_tablinks",
+          name: "Rota A",
+          ref: "Rota3A",
+          origem: [
+            "07:35",
+            "08:20",
+            "09:15",
+            "10:00",
+            "10:45",
+            "11:30",
+            "12:15",
+            "13:00",
+            "13:45",
+            "14:45",
+            "15:30",
+            "16:30",
+            "17:15",
+            "18:00",
+          ],
+          destino: [
+            "07:50",
+            "08:35",
+            "09:30",
+            "10:15",
+            "11:00",
+            "11:45",
+            "12:30",
+            "13:15",
+            "14:00",
+            "15:00",
+            "15:45",
+            "16:45",
+            "17:30",
+            "18:15",
+          ],
         },
         {
-            id: 4,
-            origem: "Redenção",
-            destino: "Fortaleza",
-            rodoviario: "(Rodoviario)",
-            ref: "Rota4B",
-            subRotas: [{
-                name: "Dia útil",
-                ref: "diaB",
-                origem: [],
-                destino: []
-            },
-            {
-                name: "SÁB",
-                ref: "sabB",
-                origem: [],
-                destino: []
-            },
-            {
-                name: "DOM.",
-                ref: "domB",
-                origem: [],
-                destino: []
-            }
-            ],
-        }
-    ])
+          class: "_tablinks",
+          name: "Rota 02",
+          ref: "Rota302",
+          origem: [
+            "07:45",
+            "08:15",
+            "08:45",
+            "09:20",
+            "09:50",
+            "10:20",
+            "14:45",
+            "15:15",
+            "15:45",
+            "16:15",
+            "17:00",
+            "17:50",
+          ],
+          destino: [
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:35",
+            "10:05",
+            "11:00",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:30",
+            "18:10",
+          ],
+        },
+      ],
+    },
+  ]);
+  const [tabsPub, setTabsPub] = useState([
+    {
+      id: 3,
+      origem: "Redenção",
+      destino: "Fortaleza",
+      rodoviario: "(Catraca)",
+      ref: "Rota4A",
+      subRotas: [
+        {
+          name: "Dia útil",
+          ref: "diaA",
+          origem: [],
+          destino: [],
+        },
+        {
+          name: "SÁB",
+          ref: "sabA",
+          origem: [],
+          destino: [],
+        },
+        {
+          name: "DOM.",
+          ref: "domA",
+          origem: [],
+          destino: [],
+        },
+      ],
+    },
+    {
+      id: 4,
+      origem: "Redenção",
+      destino: "Fortaleza",
+      rodoviario: "(Rodoviario)",
+      ref: "Rota4B",
+      subRotas: [
+        {
+          name: "Dia útil",
+          ref: "diaB",
+          origem: [],
+          destino: [],
+        },
+        {
+          name: "SÁB",
+          ref: "sabB",
+          origem: [],
+          destino: [],
+        },
+        {
+          name: "DOM.",
+          ref: "domB",
+          origem: [],
+          destino: [],
+        },
+      ],
+    },
+  ]);
 
-    
-    return (
-        <div className="rotas">
-            <Tabela tabs={tabs} tabsPub={tabsPub} />
-        </div>
-    )
-} 
+  return (
+    <div className="rotas">
+      <Tabela tabs={tabs} tabsPub={tabsPub} />
+    </div>
+  );
+}
