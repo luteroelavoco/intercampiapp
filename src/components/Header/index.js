@@ -72,7 +72,7 @@ export default function Headers() {
                 <div className="right" data-aos="fade-left"
                      data-aos-offset="300"
                      data-aos-easing="ease-in-sine">
-                    <label style={{ color: 'white' }}>  Contatar em projetocasaviva.unilab@gmail.com</label>
+                    <label style={{ color: 'white' }}>  Contatar em luteroelavoco90@gmail.com</label>
                 </div>
             </div>
             <div className="header" id="myHeader">
